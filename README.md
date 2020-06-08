@@ -1,2 +1,4 @@
 # unats.py
-NATS client for MicroPython
+
+Simple and Lightweight NATS client that can run on MicroPython.
+
