@@ -244,7 +244,8 @@ class Msg(object):
         )
     def respond(self, payload):
         # TODO: Send to the socket directly.
-        print("Respond to {} with {}", self.reply, payload)
+        # print("Respond to {} with {}", self.reply, payload)
+        pass
 
 class Subscription(object):
     def __init__(
@@ -259,7 +260,8 @@ class Subscription(object):
         self._nc = None
         self._sid = None
 
-    def next_msg(self):
+    @property
+    def messages(self):
         nc = self._nc
         while True:
             # TODO: Use readinto and scratch buffer to save allocation.
